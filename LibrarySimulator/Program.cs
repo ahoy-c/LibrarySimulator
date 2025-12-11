@@ -50,7 +50,7 @@ namespace LibrarySimulator
 
                 Console.WriteLine("Press Enter to continue or Escape to Exit…");
                 if (Console.ReadKey().Key == ConsoleKey.Escape) return;
-                Console.Clear();
+                
             }
 
             static void ActionsRegular(User user1)
