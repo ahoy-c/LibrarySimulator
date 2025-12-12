@@ -8,7 +8,6 @@ Library simulator. Supports creating users, borrowing and returning books. Featu
 - `string Title { get; }` — book title  
 - `int Id { get; }` — book identifier  
 
-> Note: these are the only public properties of the `Book` class.
 
 ### Book (main methods)
 - `static void ListAllLibraryBooks()`  
@@ -48,10 +47,6 @@ Library simulator. Supports creating users, borrowing and returning books. Featu
 
 - `StatusUser Status { get; }` — user role (regular or administrator).
 
-## How to run
-1. Open the project in Visual Studio or another .NET IDE.  
-2. Run the `Program` entry point.  
-3. Follow the console instructions to work with users and books.
 
 ## Notes
 - The README lists only the public properties and methods relevant to users. 
