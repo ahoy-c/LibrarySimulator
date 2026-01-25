@@ -1,13 +1,17 @@
 # LibrarySimulator
 
-Library simulator. Supports creating users, borrowing and returning books. Features different access levels: regular user and administrator. Administrators can add and remove books.
+Library simulator. Supports creating users, borrowing and returning books. Features different access levels: regular user and administrator. Administrators can add and remove books. Books can now be created conveniently using the **BookBuilder**, and the program startup is handled via **StartProgram**.
+
+## Program Startup
+
+- `StartProgram prog = new();`  
+  Creates and runs the program. Main logic is now inside `StartProgram`, keeping `Main` minimal.
 
 ## Public API (for regular users)
 
 ### Properties
 - `string Title { get; }` — book title  
 - `int Id { get; }` — book identifier  
-
 
 ### Book (main methods)
 - `static void ListAllLibraryBooks()`  
@@ -35,6 +39,15 @@ Library simulator. Supports creating users, borrowing and returning books. Featu
 - Inherit from `Book` and have the same public properties and methods.  
 - Override creation and information display messages (no new public properties).
 
+### BookBuilder
+- Fluent API for creating books:
+```csharp
+var book = new BookBuilder()
+    .SetTitle("Example Title")
+    .SetAuthor("Author Name")
+    .SetPublicationYear(2025)
+    .Build(); // or BuildElectronicBook("PDF"), BuildAudioBook("120")
+```
 ### User (main methods)
 - `void ShowBooks()`  
   Shows books currently borrowed by the user.
