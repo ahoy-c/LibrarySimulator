@@ -23,7 +23,7 @@ namespace LibrarySimulator
         static private List<Book> _allBooks = new List<Book>();
 
         static private int _lastIdInLibrary = 0;
-        protected enum BookType
+        public enum BookType
         {
             Regular,
             Electronic,

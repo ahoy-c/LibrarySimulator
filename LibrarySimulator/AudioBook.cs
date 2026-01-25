@@ -9,12 +9,12 @@ namespace LibrarySimulator
     public class AudioBook : Book
     {
 
-        private string _durationHour;
+        private string _durationMin;
         public AudioBook(string title, string author, int publicationYear, string duration)
             : base(title, author, publicationYear)
         {
             this._type = BookType.Audio;
-            this._durationHour = duration;
+            this._durationMin = duration;
         }
 
         protected override void ShowCreationMessage()
@@ -25,7 +25,7 @@ namespace LibrarySimulator
         }
         public override void ShowInformationAboutBook()
         {
-            Console.WriteLine($"Title: \"{_title}\", Author \"{_author}\", ID: {_id}, Type: {_type}, Duration: {_durationHour}, " +
+            Console.WriteLine($"Title: \"{_title}\", Author \"{_author}\", ID: {_id}, Type: {_type}, Duration: {_durationMin}, " +
                 $"Publication Year: {_publicationYear}, Present: {_isPresent}");
         }
     }
